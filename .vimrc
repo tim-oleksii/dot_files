@@ -3,6 +3,7 @@ set cursorline
 syntax on
 
 set encoding=utf-8
+set number relativenumber
 
 set background=dark
 color PaperColor
@@ -11,9 +12,6 @@ color PaperColor
 set expandtab
 set tabstop=4
 set shiftwidth=4
-
-set exrc
-set secure
 
 set colorcolumn=110
 highlight ColorColumn ctermbg=darkgrey
@@ -27,6 +25,7 @@ Plug 'scrooloose/nerdtree'
 " Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'NLKNguyen/papercolor-theme'
 Plug 'RRethy/vim-illuminate'
 Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
@@ -41,5 +40,5 @@ augroup numbertoogle
     autocmd!
     autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
     autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
-augroup END
 
+augroup END
